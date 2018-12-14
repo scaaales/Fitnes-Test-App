@@ -12,9 +12,15 @@
 		B320225E21C3CD97009CE08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B320225C21C3CD97009CE08C /* Main.storyboard */; };
 		B320226021C3CDCA009CE08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B320225F21C3CDCA009CE08C /* Assets.xcassets */; };
 		B320226321C3CDCA009CE08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B320226121C3CDCA009CE08C /* LaunchScreen.storyboard */; };
+		B3D9999721C3DABA005838EC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999621C3DABA005838EC /* CalendarCell.swift */; };
+		B3D9999921C3DBA4005838EC /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999821C3DBA4005838EC /* CalendarHeader.swift */; };
+		B3D9999B21C3DC48005838EC /* IdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999A21C3DC48005838EC /* IdentifierProtocol.swift */; };
+		DF3C1EA0D676E4225E73C481 /* Pods_Fitness_Test_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D712A77BA2FFCE942688447 /* Pods_Fitness_Test_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6CB4B6A6D46582A96DCE3797 /* Pods-Fitness Test App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitness Test App.debug.xcconfig"; path = "Target Support Files/Pods-Fitness Test App/Pods-Fitness Test App.debug.xcconfig"; sourceTree = "<group>"; };
+		6D712A77BA2FFCE942688447 /* Pods_Fitness_Test_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitness_Test_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B320225521C3CD96009CE08C /* Fitness Test App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fitness Test App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B320225821C3CD96009CE08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B320225A21C3CD96009CE08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		B320225F21C3CDCA009CE08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B320226221C3CDCA009CE08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B320226421C3CDCB009CE08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D9999621C3DABA005838EC /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		B3D9999821C3DBA4005838EC /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
+		B3D9999A21C3DC48005838EC /* IdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierProtocol.swift; sourceTree = "<group>"; };
+		BF60ADD9358CD8D4B10A30FA /* Pods-Fitness Test App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitness Test App.release.xcconfig"; path = "Target Support Files/Pods-Fitness Test App/Pods-Fitness Test App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3C1EA0D676E4225E73C481 /* Pods_Fitness_Test_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62B3EAC0E55C0CD203484717 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D712A77BA2FFCE942688447 /* Pods_Fitness_Test_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B320224C21C3CD94009CE08C = {
 			isa = PBXGroup;
 			children = (
 				B320225721C3CD96009CE08C /* Fitness Test App */,
 				B320225621C3CD96009CE08C /* Products */,
+				F8DDCF4AA88DA4707B3F6CDF /* Pods */,
+				62B3EAC0E55C0CD203484717 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +77,24 @@
 			children = (
 				B320225821C3CD96009CE08C /* AppDelegate.swift */,
 				B320225A21C3CD96009CE08C /* ViewController.swift */,
+				B3D9999621C3DABA005838EC /* CalendarCell.swift */,
+				B3D9999A21C3DC48005838EC /* IdentifierProtocol.swift */,
+				B3D9999821C3DBA4005838EC /* CalendarHeader.swift */,
 				B320225C21C3CD97009CE08C /* Main.storyboard */,
 				B320225F21C3CDCA009CE08C /* Assets.xcassets */,
 				B320226121C3CDCA009CE08C /* LaunchScreen.storyboard */,
 				B320226421C3CDCB009CE08C /* Info.plist */,
 			);
 			path = "Fitness Test App";
+			sourceTree = "<group>";
+		};
+		F8DDCF4AA88DA4707B3F6CDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CB4B6A6D46582A96DCE3797 /* Pods-Fitness Test App.debug.xcconfig */,
+				BF60ADD9358CD8D4B10A30FA /* Pods-Fitness Test App.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B320226721C3CDCB009CE08C /* Build configuration list for PBXNativeTarget "Fitness Test App" */;
 			buildPhases = (
+				6D83759F3D7AE176821222B8 /* [CP] Check Pods Manifest.lock */,
 				B320225121C3CD95009CE08C /* Sources */,
 				B320225221C3CD95009CE08C /* Frameworks */,
 				B320225321C3CD95009CE08C /* Resources */,
+				A73BA11E9814A425C3F06070 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,12 +165,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D83759F3D7AE176821222B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fitness Test App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A73BA11E9814A425C3F06070 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Fitness Test App/Pods-Fitness Test App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fitness Test App/Pods-Fitness Test App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B320225121C3CD95009CE08C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B320225B21C3CD96009CE08C /* ViewController.swift in Sources */,
+				B3D9999721C3DABA005838EC /* CalendarCell.swift in Sources */,
+				B3D9999921C3DBA4005838EC /* CalendarHeader.swift in Sources */,
+				B3D9999B21C3DC48005838EC /* IdentifierProtocol.swift in Sources */,
 				B320225921C3CD96009CE08C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +365,7 @@
 		};
 		B320226821C3CDCB009CE08C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB4B6A6D46582A96DCE3797 /* Pods-Fitness Test App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +384,7 @@
 		};
 		B320226921C3CDCB009CE08C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF60ADD9358CD8D4B10A30FA /* Pods-Fitness Test App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
