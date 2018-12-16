@@ -10,7 +10,12 @@ import UIKit
 
 class BodyMeasurementHeader: UITableViewCell, ConfigurableCell {
 	typealias DataType = MeasurementPeriod
+	
+	@IBOutlet private weak var startDateLabel: UILabel!
+	@IBOutlet private weak var endDateLabel: UILabel!
+	
 	func configure(data: MeasurementPeriod) {
-		
+		startDateLabel.text = data.startDate
+		endDateLabel.text = data.endDate
 	}
 }

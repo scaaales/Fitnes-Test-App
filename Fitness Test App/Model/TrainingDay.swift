@@ -11,5 +11,5 @@ import Foundation
 struct TrainingDay {
 	let time: String
 	let calories: String
-	let coints: String
+	let coins: String
 }

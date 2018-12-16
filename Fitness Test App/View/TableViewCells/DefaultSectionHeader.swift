@@ -11,8 +11,10 @@ import UIKit
 class DefaultSectionHeader: UITableViewCell, ConfigurableCell {
 	typealias DataType = String
 	
+	@IBOutlet private weak var sectionName: UILabel!
+	
 	func configure(data: String) {
-		
+		sectionName.text = data
 	}
 
 }

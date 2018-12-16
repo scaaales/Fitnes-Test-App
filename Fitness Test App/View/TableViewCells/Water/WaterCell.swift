@@ -10,7 +10,11 @@ import UIKit
 
 class WaterCell: UITableViewCell, ConfigurableCell {
 	typealias DataType = Water
+	
+	@IBOutlet private weak var progressView: ProgressView!
+	
 	func configure(data: Water) {
-		
+		progressView.setProgress(startValue: data.result, endValue: data.result, progress: 1)
+		progressView.setBottomLabels(hidden: false)
 	}
 }

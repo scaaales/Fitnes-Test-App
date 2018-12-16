@@ -28,8 +28,16 @@ class ViewController: UIViewController {
 	private func setupTableView() {
 		mainTableView.delegate = self
 		mainTableView.dataSource = self
+		
+		mainTableView.estimatedSectionHeaderHeight = 2
+		mainTableView.sectionHeaderHeight = UITableView.automaticDimension
+		
 		mainTableView.estimatedRowHeight = 2
 		mainTableView.rowHeight = UITableView.automaticDimension
+		
+		mainTableView.estimatedSectionFooterHeight = 2
+		mainTableView.sectionFooterHeight = UITableView.automaticDimension
+		
 		mainTableView.backgroundColor = .white
 	}
 
@@ -44,6 +52,16 @@ extension ViewController: UITableViewDataSource {
 		return tableViewModel.sections[section].items.count
 	}
 	
+	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		if let item = tableViewModel.sections[section].header, let header = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId) {
+			item.configure(cell: header)
+			
+			return header.contentView
+		}
+		
+		return nil
+	}
+	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let item = tableViewModel.sections[indexPath.section].items[indexPath.row]
 		
@@ -52,6 +70,17 @@ extension ViewController: UITableViewDataSource {
 		
 		return cell
 	}
+	
+	func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+		if let item = tableViewModel.sections[section].footer, let footer = tableView.dequeueReusableCell(withIdentifier: type(of: item).reuseId) {
+			item.configure(cell: footer)
+			
+			return footer.contentView
+		}
+		
+		return nil
+	}
+	
 }
 
 extension ViewController: UITableViewDelegate {

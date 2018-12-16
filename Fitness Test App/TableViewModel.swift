@@ -14,7 +14,6 @@ typealias DefaultSectionHeaderConfigurator = TableCellConfigurator<DefaultSectio
 typealias TrainingDayCellConfigurator = TableCellConfigurator<TrainingDayCell, TrainingDay>
 
 typealias StepCellConfigurator = TableCellConfigurator<StepCell, Steps>
-typealias StepFooterConfigurator = TableCellConfigurator<StepFooter, Void>
 
 typealias WaterCellConfigurator = TableCellConfigurator<WaterCell, Water>
 
@@ -47,13 +46,13 @@ class TableViewModel {
 		let trainingDaySection = Section(header: DefaultSectionHeaderConfigurator(item: "Training day"),
 									items: [TrainingDayCellConfigurator(item: TrainingDay(time: "02 36",
 																						  calories: "-- --",
-																						  coints: "-- --"))],
+																						  coins: "-- --"))],
 									footer: nil)
 		
 		let stepsSection = Section(header: DefaultSectionHeaderConfigurator(item: "Steps"),
 								   items: [StepCellConfigurator(item: Steps(current: 2672,
 																			goal: 5000))],
-								   footer: StepFooterConfigurator())
+								   footer: nil)
 		
 		let waterSection = Section(header: DefaultSectionHeaderConfigurator(item: "Water"),
 									items: [WaterCellConfigurator(item: Water(result: "0",

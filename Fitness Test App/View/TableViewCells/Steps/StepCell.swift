@@ -10,7 +10,11 @@ import UIKit
 
 class StepCell: UITableViewCell, ConfigurableCell {
 	typealias DataType = Steps
+	
+	@IBOutlet private weak var progressView: ProgressView!
+	
 	func configure(data: Steps) {
-		
+		progressView.setProgress(startValue: "\(data.current)", endValue: "\(data.goal)", progress: Float(data.current)/Float(data.goal))
+		progressView.setBottomLabels(hidden: false)
 	}
 }
