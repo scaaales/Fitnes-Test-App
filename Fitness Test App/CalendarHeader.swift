@@ -10,6 +10,8 @@ import UIKit
 import JTAppleCalendar
 
 class CalendarHeader: UITableViewCell, Identifierable {
+	@IBOutlet private weak var shadowView: UIView!
+	@IBOutlet private weak var roundedView: UIView!
 	@IBOutlet private weak var titleLabel: UILabel!
 	@IBOutlet private weak var collectionView: JTAppleCalendarView!
 	
@@ -23,9 +25,11 @@ class CalendarHeader: UITableViewCell, Identifierable {
 		collectionView.visibleDates { [weak self] visibleDate in
 			self?.setupViewsOfCalendar(from: visibleDate)
 		}
-		collectionView.scrollToDate(Date())
-//		makeRoundedBottom(view: collectionView)
-//		makeShadow()
+		collectionView.scrollToDate(Date(), triggerScrollToDateDelegate: true, animateScroll: false)
+		
+		makeRounded(view: roundedView, masksToBounds: true)
+		makeRounded(view: shadowView, masksToBounds: false)
+		makeShadow()
 	}
 	
 	private func setupViewsOfCalendar(from visibleDates: DateSegmentInfo) {
@@ -36,23 +40,17 @@ class CalendarHeader: UITableViewCell, Identifierable {
 		titleLabel.text = monthWithYear
 	}
 	
-	private func makeRoundedBottom(view: UIView) {
-		let maskPath = UIBezierPath(roundedRect: view.bounds,
-									 byRoundingCorners: [.bottomRight , .bottomLeft],
-									 cornerRadii: CGSize(width: 15, height: 15))
-		let maskLayer = CAShapeLayer()
-		maskLayer.frame = bounds
-		maskLayer.path = maskPath.cgPath
-		view.layer.mask = maskLayer
-		view.layer.masksToBounds = true
+	private func makeRounded(view: UIView, masksToBounds: Bool) {
+		view.layer.cornerRadius = 30
+		view.layer.masksToBounds = masksToBounds
 	}
 	
 	private func makeShadow() {
-		collectionView.layer.shadowColor = UIColor.black.cgColor
-		collectionView.layer.shadowOffset = CGSize(width: 10, height: 10)
-		collectionView.layer.shadowOpacity = 0.7
-		collectionView.layer.shadowRadius = 7
-		collectionView.layer.masksToBounds = true
+		shadowView.layer.shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 30).cgPath
+		shadowView.layer.shadowColor = UIColor.black.cgColor
+		shadowView.layer.shadowOffset = CGSize(width: 0, height: 2)
+		shadowView.layer.shadowOpacity = 0.5
+		shadowView.layer.shadowRadius = 6
 	}
 	
 	@IBAction func prevMonth(_ sender: Any) {

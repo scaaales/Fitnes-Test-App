@@ -29,70 +29,89 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="349"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DU2-2o-thE" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                                    <rect key="frame" x="0.0" y="51.5" width="375" height="262.5"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCT-xr-ewT">
+                                                    <rect key="frame" x="0.0" y="274" width="375" height="30"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Iga-pg-gGs"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9h-2I-3e8">
+                                                    <rect key="frame" x="0.0" y="51.5" width="375" height="252.5"/>
+                                                    <subviews>
+                                                        <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DU2-2o-thE" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="262.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="DU2-2o-thE" secondAttribute="height" multiplier="93.8:65.7" id="FVa-7A-5Xt"/>
+                                                            </constraints>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dBv-Q6-hJW">
+                                                                <size key="itemSize" width="116" height="99"/>
+                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                            </collectionViewFlowLayout>
+                                                            <cells>
+                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCell" id="Urm-mT-sAN" customClass="CalendarCell" customModule="Fitness_Test_App" customModuleProvider="target">
+                                                                    <rect key="frame" x="10" y="10" width="116" height="99"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="116" height="99"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeB-8M-7TV" userLabel="Event">
+                                                                                <rect key="frame" x="40.5" y="32" width="35" height="35"/>
+                                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="35" id="B0j-6c-DgT"/>
+                                                                                    <constraint firstAttribute="width" secondItem="oeB-8M-7TV" secondAttribute="height" multiplier="1:1" id="CTg-Lu-MzY"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-ru-BCZ" userLabel="Selected">
+                                                                                <rect key="frame" x="40.5" y="32" width="35" height="35"/>
+                                                                                <color key="backgroundColor" red="0.27450980392156865" green="0.5607843137254902" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="35" id="eHm-Da-juS"/>
+                                                                                    <constraint firstAttribute="width" secondItem="wtr-ru-BCZ" secondAttribute="height" multiplier="1:1" id="feM-Q2-TJx"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxR-OZ-GXJ">
+                                                                                <rect key="frame" x="37" y="39" width="42" height="21"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </view>
+                                                                    <constraints>
+                                                                        <constraint firstItem="IxR-OZ-GXJ" firstAttribute="centerY" secondItem="Urm-mT-sAN" secondAttribute="centerY" id="2cT-W5-f0e"/>
+                                                                        <constraint firstItem="oeB-8M-7TV" firstAttribute="centerY" secondItem="IxR-OZ-GXJ" secondAttribute="centerY" id="DV7-sQ-ndQ"/>
+                                                                        <constraint firstItem="wtr-ru-BCZ" firstAttribute="centerY" secondItem="IxR-OZ-GXJ" secondAttribute="centerY" id="L8A-mw-lyv"/>
+                                                                        <constraint firstItem="IxR-OZ-GXJ" firstAttribute="centerX" secondItem="Urm-mT-sAN" secondAttribute="centerX" id="Qz3-aC-VzC"/>
+                                                                        <constraint firstItem="wtr-ru-BCZ" firstAttribute="centerX" secondItem="IxR-OZ-GXJ" secondAttribute="centerX" id="mPf-9z-9RX"/>
+                                                                        <constraint firstItem="oeB-8M-7TV" firstAttribute="centerX" secondItem="IxR-OZ-GXJ" secondAttribute="centerX" id="xRV-Li-epD"/>
+                                                                    </constraints>
+                                                                    <connections>
+                                                                        <outlet property="dateLabel" destination="IxR-OZ-GXJ" id="CzQ-RS-8me"/>
+                                                                        <outlet property="eventView" destination="oeB-8M-7TV" id="iBO-gt-brC"/>
+                                                                        <outlet property="selectedView" destination="wtr-ru-BCZ" id="EcK-cc-oMP"/>
+                                                                    </connections>
+                                                                </collectionViewCell>
+                                                            </cells>
+                                                            <connections>
+                                                                <outlet property="ibCalendarDataSource" destination="KKj-2y-oQV" id="ReM-h3-Ypm"/>
+                                                                <outlet property="ibCalendarDelegate" destination="KKj-2y-oQV" id="XKU-Gh-Xz2"/>
+                                                            </connections>
+                                                        </collectionView>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="DU2-2o-thE" secondAttribute="height" multiplier="93.8:65.7" id="FVa-7A-5Xt"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DU2-2o-thE" secondAttribute="trailing" id="1Gn-vW-iCV"/>
+                                                        <constraint firstItem="DU2-2o-thE" firstAttribute="bottom" secondItem="s9h-2I-3e8" secondAttribute="bottom" constant="10" id="ZRf-Cm-X7y"/>
+                                                        <constraint firstItem="DU2-2o-thE" firstAttribute="leading" secondItem="s9h-2I-3e8" secondAttribute="leading" id="scu-wx-gmh"/>
+                                                        <constraint firstItem="DU2-2o-thE" firstAttribute="top" secondItem="s9h-2I-3e8" secondAttribute="top" id="xXm-57-dWy"/>
                                                     </constraints>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dBv-Q6-hJW">
-                                                        <size key="itemSize" width="116" height="99"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCell" id="Urm-mT-sAN" customClass="CalendarCell" customModule="Fitness_Test_App" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="116" height="99"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="116" height="99"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeB-8M-7TV" userLabel="Event">
-                                                                        <rect key="frame" x="40.5" y="32" width="35" height="35"/>
-                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="35" id="B0j-6c-DgT"/>
-                                                                            <constraint firstAttribute="width" secondItem="oeB-8M-7TV" secondAttribute="height" multiplier="1:1" id="CTg-Lu-MzY"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtr-ru-BCZ" userLabel="Selected">
-                                                                        <rect key="frame" x="40.5" y="32" width="35" height="35"/>
-                                                                        <color key="backgroundColor" red="0.27450980392156865" green="0.5607843137254902" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="35" id="eHm-Da-juS"/>
-                                                                            <constraint firstAttribute="width" secondItem="wtr-ru-BCZ" secondAttribute="height" multiplier="1:1" id="feM-Q2-TJx"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxR-OZ-GXJ">
-                                                                        <rect key="frame" x="37" y="39" width="42" height="21"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </view>
-                                                            <constraints>
-                                                                <constraint firstItem="IxR-OZ-GXJ" firstAttribute="centerY" secondItem="Urm-mT-sAN" secondAttribute="centerY" id="2cT-W5-f0e"/>
-                                                                <constraint firstItem="oeB-8M-7TV" firstAttribute="centerY" secondItem="IxR-OZ-GXJ" secondAttribute="centerY" id="DV7-sQ-ndQ"/>
-                                                                <constraint firstItem="wtr-ru-BCZ" firstAttribute="centerY" secondItem="IxR-OZ-GXJ" secondAttribute="centerY" id="L8A-mw-lyv"/>
-                                                                <constraint firstItem="IxR-OZ-GXJ" firstAttribute="centerX" secondItem="Urm-mT-sAN" secondAttribute="centerX" id="Qz3-aC-VzC"/>
-                                                                <constraint firstItem="wtr-ru-BCZ" firstAttribute="centerX" secondItem="IxR-OZ-GXJ" secondAttribute="centerX" id="mPf-9z-9RX"/>
-                                                                <constraint firstItem="oeB-8M-7TV" firstAttribute="centerX" secondItem="IxR-OZ-GXJ" secondAttribute="centerX" id="xRV-Li-epD"/>
-                                                            </constraints>
-                                                            <connections>
-                                                                <outlet property="dateLabel" destination="IxR-OZ-GXJ" id="CzQ-RS-8me"/>
-                                                                <outlet property="eventView" destination="oeB-8M-7TV" id="iBO-gt-brC"/>
-                                                                <outlet property="selectedView" destination="wtr-ru-BCZ" id="EcK-cc-oMP"/>
-                                                            </connections>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                    <connections>
-                                                        <outlet property="ibCalendarDataSource" destination="KKj-2y-oQV" id="ReM-h3-Ypm"/>
-                                                        <outlet property="ibCalendarDelegate" destination="KKj-2y-oQV" id="XKU-Gh-Xz2"/>
-                                                    </connections>
-                                                </collectionView>
+                                                </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="SM1-w6-CKU">
                                                     <rect key="frame" x="15" y="27" width="345" height="20.5"/>
                                                     <subviews>
@@ -172,21 +191,26 @@
                                             <constraints>
                                                 <constraint firstItem="SM1-w6-CKU" firstAttribute="leading" secondItem="RtE-6w-Ln0" secondAttribute="leading" constant="15" id="0pO-iT-vKq"/>
                                                 <constraint firstItem="UDZ-wj-bHn" firstAttribute="leading" secondItem="RtE-6w-Ln0" secondAttribute="leading" constant="10" id="17H-WF-l7u"/>
-                                                <constraint firstAttribute="trailing" secondItem="DU2-2o-thE" secondAttribute="trailing" id="9t4-1q-6TF"/>
+                                                <constraint firstAttribute="trailing" secondItem="s9h-2I-3e8" secondAttribute="trailing" id="6Ib-WZ-xZb"/>
+                                                <constraint firstItem="eCT-xr-ewT" firstAttribute="bottom" secondItem="s9h-2I-3e8" secondAttribute="bottom" id="D13-sC-8yf"/>
                                                 <constraint firstItem="UDZ-wj-bHn" firstAttribute="top" secondItem="RtE-6w-Ln0" secondAttribute="top" constant="3" id="IAN-Fk-IsW"/>
                                                 <constraint firstItem="Gsg-1Z-Zk7" firstAttribute="top" secondItem="RtE-6w-Ln0" secondAttribute="top" constant="3" id="IXF-z0-nf2"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DU2-2o-thE" secondAttribute="bottom" constant="20" id="Lx7-gA-6xN"/>
-                                                <constraint firstItem="DU2-2o-thE" firstAttribute="leading" secondItem="RtE-6w-Ln0" secondAttribute="leading" id="anG-yS-n42"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="s9h-2I-3e8" secondAttribute="bottom" constant="13" id="JIR-Tf-HE3"/>
+                                                <constraint firstItem="s9h-2I-3e8" firstAttribute="leading" secondItem="RtE-6w-Ln0" secondAttribute="leading" id="Kah-uL-exv"/>
+                                                <constraint firstItem="eCT-xr-ewT" firstAttribute="leading" secondItem="s9h-2I-3e8" secondAttribute="leading" id="Kew-wr-c7I"/>
+                                                <constraint firstItem="s9h-2I-3e8" firstAttribute="top" secondItem="SM1-w6-CKU" secondAttribute="bottom" constant="4" id="LhQ-k6-ZM1"/>
                                                 <constraint firstAttribute="trailing" secondItem="SM1-w6-CKU" secondAttribute="trailing" constant="15" id="bBK-JQ-8KQ"/>
-                                                <constraint firstItem="DU2-2o-thE" firstAttribute="top" secondItem="SM1-w6-CKU" secondAttribute="bottom" constant="4" id="fhc-4g-WY8"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gsg-1Z-Zk7" secondAttribute="trailing" constant="10" id="i5r-fq-cLs"/>
                                                 <constraint firstItem="rHM-ZR-1Eb" firstAttribute="top" secondItem="RtE-6w-Ln0" secondAttribute="top" constant="4" id="iGF-jx-cuu"/>
                                                 <constraint firstItem="rHM-ZR-1Eb" firstAttribute="centerX" secondItem="RtE-6w-Ln0" secondAttribute="centerX" id="mZj-9D-MIV"/>
+                                                <constraint firstItem="eCT-xr-ewT" firstAttribute="width" secondItem="s9h-2I-3e8" secondAttribute="width" id="tXJ-G4-jJD"/>
                                                 <constraint firstItem="SM1-w6-CKU" firstAttribute="top" secondItem="rHM-ZR-1Eb" secondAttribute="bottom" constant="6" id="z5T-iA-hgR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="collectionView" destination="DU2-2o-thE" id="50q-rD-dwA"/>
+                                            <outlet property="roundedView" destination="s9h-2I-3e8" id="wuw-mf-prM"/>
+                                            <outlet property="shadowView" destination="eCT-xr-ewT" id="dJi-cm-N29"/>
                                             <outlet property="titleLabel" destination="rHM-ZR-1Eb" id="v0w-uS-d14"/>
                                         </connections>
                                     </tableViewCell>
