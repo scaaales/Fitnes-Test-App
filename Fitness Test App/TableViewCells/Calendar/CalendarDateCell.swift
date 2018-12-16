@@ -1,5 +1,5 @@
 //
-//  CalendarCell.swift
+//  CalendarDateCell.swift
 //  Fitness Test App
 //
 //  Created by scales on 12/14/18.
@@ -9,7 +9,9 @@
 import UIKit
 import JTAppleCalendar
 
-class CalendarCell: JTAppleCell, Identifierable {	
+class CalendarDateCell: JTAppleCell {
+	static var reuseId: String { return String(describing: CalendarDateCell.self) }
+	
 	@IBOutlet private weak var dateLabel: UILabel!
 	@IBOutlet private weak var eventView: UIView!
 	@IBOutlet private weak var selectedView: UIView!

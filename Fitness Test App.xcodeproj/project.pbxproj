@@ -12,9 +12,25 @@
 		B320225E21C3CD97009CE08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B320225C21C3CD97009CE08C /* Main.storyboard */; };
 		B320226021C3CDCA009CE08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B320225F21C3CDCA009CE08C /* Assets.xcassets */; };
 		B320226321C3CDCA009CE08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B320226121C3CDCA009CE08C /* LaunchScreen.storyboard */; };
-		B3D9999721C3DABA005838EC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999621C3DABA005838EC /* CalendarCell.swift */; };
-		B3D9999921C3DBA4005838EC /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999821C3DBA4005838EC /* CalendarHeader.swift */; };
-		B3D9999B21C3DC48005838EC /* IdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999A21C3DC48005838EC /* IdentifierProtocol.swift */; };
+		B34403F321C688F00091666F /* TrainingDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34403F221C688F00091666F /* TrainingDayCell.swift */; };
+		B34403F921C689840091666F /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34403F821C689840091666F /* StepCell.swift */; };
+		B34403FB21C689B60091666F /* WaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34403FA21C689B60091666F /* WaterCell.swift */; };
+		B34403FD21C689FA0091666F /* NutritionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34403FC21C689FA0091666F /* NutritionCell.swift */; };
+		B34403FF21C68A570091666F /* BodyMeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34403FE21C68A570091666F /* BodyMeasurementCell.swift */; };
+		B344040221C68ACF0091666F /* DefaultSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344040121C68ACF0091666F /* DefaultSectionHeader.swift */; };
+		B344040621C68C550091666F /* BodyMeasurementHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344040521C68C550091666F /* BodyMeasurementHeader.swift */; };
+		B344040921C68C9C0091666F /* BodyMeasurementFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344040821C68C9C0091666F /* BodyMeasurementFooter.swift */; };
+		B344040B21C68CE60091666F /* StepFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344040A21C68CE60091666F /* StepFooter.swift */; };
+		B344041021C6A4250091666F /* CellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344040F21C6A4250091666F /* CellConfigurator.swift */; };
+		B344041321C6A79A0091666F /* TrainingDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344041221C6A79A0091666F /* TrainingDay.swift */; };
+		B344041521C6A95E0091666F /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344041421C6A95E0091666F /* Steps.swift */; };
+		B344041721C6A97B0091666F /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344041621C6A97B0091666F /* Water.swift */; };
+		B344041921C6A9850091666F /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344041821C6A9850091666F /* Measurement.swift */; };
+		B344041B21C6A9910091666F /* MeasurementPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344041A21C6A9910091666F /* MeasurementPeriod.swift */; };
+		B344041F21C6AD050091666F /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344041E21C6AD050091666F /* TableViewModel.swift */; };
+		B3D9999721C3DABA005838EC /* CalendarDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999621C3DABA005838EC /* CalendarDateCell.swift */; };
+		B3D9999921C3DBA4005838EC /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999821C3DBA4005838EC /* CalendarCell.swift */; };
+		B3D9999B21C3DC48005838EC /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9999A21C3DC48005838EC /* ConfigurableCell.swift */; };
 		DF3C1EA0D676E4225E73C481 /* Pods_Fitness_Test_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D712A77BA2FFCE942688447 /* Pods_Fitness_Test_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +44,25 @@
 		B320225F21C3CDCA009CE08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B320226221C3CDCA009CE08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B320226421C3CDCB009CE08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3D9999621C3DABA005838EC /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
-		B3D9999821C3DBA4005838EC /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
-		B3D9999A21C3DC48005838EC /* IdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierProtocol.swift; sourceTree = "<group>"; };
+		B34403F221C688F00091666F /* TrainingDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDayCell.swift; sourceTree = "<group>"; };
+		B34403F821C689840091666F /* StepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
+		B34403FA21C689B60091666F /* WaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCell.swift; sourceTree = "<group>"; };
+		B34403FC21C689FA0091666F /* NutritionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionCell.swift; sourceTree = "<group>"; };
+		B34403FE21C68A570091666F /* BodyMeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasurementCell.swift; sourceTree = "<group>"; };
+		B344040121C68ACF0091666F /* DefaultSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSectionHeader.swift; sourceTree = "<group>"; };
+		B344040521C68C550091666F /* BodyMeasurementHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasurementHeader.swift; sourceTree = "<group>"; };
+		B344040821C68C9C0091666F /* BodyMeasurementFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMeasurementFooter.swift; sourceTree = "<group>"; };
+		B344040A21C68CE60091666F /* StepFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFooter.swift; sourceTree = "<group>"; };
+		B344040F21C6A4250091666F /* CellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurator.swift; sourceTree = "<group>"; };
+		B344041221C6A79A0091666F /* TrainingDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDay.swift; sourceTree = "<group>"; };
+		B344041421C6A95E0091666F /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		B344041621C6A97B0091666F /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
+		B344041821C6A9850091666F /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		B344041A21C6A9910091666F /* MeasurementPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPeriod.swift; sourceTree = "<group>"; };
+		B344041E21C6AD050091666F /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		B3D9999621C3DABA005838EC /* CalendarDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateCell.swift; sourceTree = "<group>"; };
+		B3D9999821C3DBA4005838EC /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		B3D9999A21C3DC48005838EC /* ConfigurableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
 		BF60ADD9358CD8D4B10A30FA /* Pods-Fitness Test App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitness Test App.release.xcconfig"; path = "Target Support Files/Pods-Fitness Test App/Pods-Fitness Test App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,15 +109,95 @@
 			children = (
 				B320225821C3CD96009CE08C /* AppDelegate.swift */,
 				B320225A21C3CD96009CE08C /* ViewController.swift */,
-				B3D9999621C3DABA005838EC /* CalendarCell.swift */,
-				B3D9999A21C3DC48005838EC /* IdentifierProtocol.swift */,
-				B3D9999821C3DBA4005838EC /* CalendarHeader.swift */,
+				B344040F21C6A4250091666F /* CellConfigurator.swift */,
+				B344041E21C6AD050091666F /* TableViewModel.swift */,
+				B344041121C6A7820091666F /* Model */,
+				B34403EE21C6877B0091666F /* TableViewCells */,
 				B320225C21C3CD97009CE08C /* Main.storyboard */,
 				B320225F21C3CDCA009CE08C /* Assets.xcassets */,
 				B320226121C3CDCA009CE08C /* LaunchScreen.storyboard */,
 				B320226421C3CDCB009CE08C /* Info.plist */,
 			);
 			path = "Fitness Test App";
+			sourceTree = "<group>";
+		};
+		B34403EE21C6877B0091666F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B3D9999A21C3DC48005838EC /* ConfigurableCell.swift */,
+				B344040121C68ACF0091666F /* DefaultSectionHeader.swift */,
+				B34403EF21C6879A0091666F /* Calendar */,
+				B34403F121C688BD0091666F /* Training day */,
+				B34403F421C689360091666F /* Steps */,
+				B34403F521C689410091666F /* Water */,
+				B34403F621C6894D0091666F /* Nutrition */,
+				B34403F721C689630091666F /* Body Measurements */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		B34403EF21C6879A0091666F /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B3D9999621C3DABA005838EC /* CalendarDateCell.swift */,
+				B3D9999821C3DBA4005838EC /* CalendarCell.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		B34403F121C688BD0091666F /* Training day */ = {
+			isa = PBXGroup;
+			children = (
+				B34403F221C688F00091666F /* TrainingDayCell.swift */,
+			);
+			path = "Training day";
+			sourceTree = "<group>";
+		};
+		B34403F421C689360091666F /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				B34403F821C689840091666F /* StepCell.swift */,
+				B344040A21C68CE60091666F /* StepFooter.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		B34403F521C689410091666F /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				B34403FA21C689B60091666F /* WaterCell.swift */,
+			);
+			path = Water;
+			sourceTree = "<group>";
+		};
+		B34403F621C6894D0091666F /* Nutrition */ = {
+			isa = PBXGroup;
+			children = (
+				B34403FC21C689FA0091666F /* NutritionCell.swift */,
+			);
+			path = Nutrition;
+			sourceTree = "<group>";
+		};
+		B34403F721C689630091666F /* Body Measurements */ = {
+			isa = PBXGroup;
+			children = (
+				B344040521C68C550091666F /* BodyMeasurementHeader.swift */,
+				B34403FE21C68A570091666F /* BodyMeasurementCell.swift */,
+				B344040821C68C9C0091666F /* BodyMeasurementFooter.swift */,
+			);
+			path = "Body Measurements";
+			sourceTree = "<group>";
+		};
+		B344041121C6A7820091666F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B344041221C6A79A0091666F /* TrainingDay.swift */,
+				B344041421C6A95E0091666F /* Steps.swift */,
+				B344041621C6A97B0091666F /* Water.swift */,
+				B344041821C6A9850091666F /* Measurement.swift */,
+				B344041A21C6A9910091666F /* MeasurementPeriod.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F8DDCF4AA88DA4707B3F6CDF /* Pods */ = {
@@ -217,11 +329,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B344040921C68C9C0091666F /* BodyMeasurementFooter.swift in Sources */,
 				B320225B21C3CD96009CE08C /* ViewController.swift in Sources */,
-				B3D9999721C3DABA005838EC /* CalendarCell.swift in Sources */,
-				B3D9999921C3DBA4005838EC /* CalendarHeader.swift in Sources */,
-				B3D9999B21C3DC48005838EC /* IdentifierProtocol.swift in Sources */,
+				B3D9999721C3DABA005838EC /* CalendarDateCell.swift in Sources */,
+				B344041721C6A97B0091666F /* Water.swift in Sources */,
+				B34403F321C688F00091666F /* TrainingDayCell.swift in Sources */,
+				B344041021C6A4250091666F /* CellConfigurator.swift in Sources */,
+				B34403F921C689840091666F /* StepCell.swift in Sources */,
+				B3D9999921C3DBA4005838EC /* CalendarCell.swift in Sources */,
+				B344041321C6A79A0091666F /* TrainingDay.swift in Sources */,
+				B344040B21C68CE60091666F /* StepFooter.swift in Sources */,
+				B34403FD21C689FA0091666F /* NutritionCell.swift in Sources */,
+				B344041921C6A9850091666F /* Measurement.swift in Sources */,
+				B34403FB21C689B60091666F /* WaterCell.swift in Sources */,
+				B344041521C6A95E0091666F /* Steps.swift in Sources */,
+				B3D9999B21C3DC48005838EC /* ConfigurableCell.swift in Sources */,
+				B344041F21C6AD050091666F /* TableViewModel.swift in Sources */,
+				B344040221C68ACF0091666F /* DefaultSectionHeader.swift in Sources */,
+				B34403FF21C68A570091666F /* BodyMeasurementCell.swift in Sources */,
+				B344041B21C6A9910091666F /* MeasurementPeriod.swift in Sources */,
 				B320225921C3CD96009CE08C /* AppDelegate.swift in Sources */,
+				B344040621C68C550091666F /* BodyMeasurementHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

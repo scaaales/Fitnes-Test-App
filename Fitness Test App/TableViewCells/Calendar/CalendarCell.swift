@@ -1,5 +1,5 @@
 //
-//  CalendarHeader.swift
+//  CalendarCell.swift
 //  Fitness Test App
 //
 //  Created by scales on 12/14/18.
@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 
-class CalendarHeader: UITableViewCell, Identifierable {
+class CalendarCell: UITableViewCell, ConfigurableCell {
 	@IBOutlet private weak var shadowView: UIView!
 	@IBOutlet private weak var roundedView: UIView!
 	@IBOutlet private weak var titleLabel: UILabel!
@@ -63,7 +63,7 @@ class CalendarHeader: UITableViewCell, Identifierable {
 	
 }
 
-extension CalendarHeader: JTAppleCalendarViewDataSource {
+extension CalendarCell: JTAppleCalendarViewDataSource {
 	func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
 		formatter.dateFormat = "yyyy MM dd"
 		formatter.timeZone = Calendar.current.timeZone
@@ -77,13 +77,13 @@ extension CalendarHeader: JTAppleCalendarViewDataSource {
 	
 }
 
-extension CalendarHeader: JTAppleCalendarViewDelegate {
+extension CalendarCell: JTAppleCalendarViewDelegate {
 	func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
 
 	}
 	
 	func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-		guard let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: CalendarCell.reuseIdentifier, for: indexPath) as? CalendarCell else { fatalError() }
+		guard let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: CalendarDateCell.reuseId, for: indexPath) as? CalendarDateCell else { fatalError() }
 		if cellState.dateBelongsTo == .thisMonth {
 			cell.configure(text: cellState.text, isSelected: false, hasIvent: false)
 		} else {
@@ -94,12 +94,12 @@ extension CalendarHeader: JTAppleCalendarViewDelegate {
 	}
 	
 	func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-		guard let cell = cell as? CalendarCell else { return }
+		guard let cell = cell as? CalendarDateCell else { return }
 		cell.set(selected: true)
 	}
 	
 	func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-		guard let cell = cell as? CalendarCell else { return }
+		guard let cell = cell as? CalendarDateCell else { return }
 		cell.set(selected: false)
 	}
 	
